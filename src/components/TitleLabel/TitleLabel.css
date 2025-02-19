@@ -1,0 +1,22 @@
+.title-label {
+    background-color: #7813C5;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 100px;
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    gap: 5px;
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 768px) {}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .title-label {
+        padding: 0.3rem;
+    }
+}
