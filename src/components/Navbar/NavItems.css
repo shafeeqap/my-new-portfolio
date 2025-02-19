@@ -1,0 +1,18 @@
+.nav-items-container li{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.nav-items-container li{
+    cursor: pointer;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: #840ae0;
+    font-weight: bold;
+    border-bottom: 2px solid #7813C5;
+}
