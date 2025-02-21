@@ -5,23 +5,21 @@ import Button from "../../components/Button/Button";
 import { buttonList, imageList } from "../../static/data";
 import TextContent from "./TextContent";
 
-
 const Home = () => {
   return (
     <div className="container">
       <div className="content-wrapper">
-        <div>
-          <HeaderLabel>
-            {imageList.map((img, index) => (
-              <img
-                key={index}
-                src={img.src}
-                alt={img.alt}
-                style={{ cursor: "pointer", width: "20px" }}
-              />
-            ))}
-          </HeaderLabel>
-        </div>
+        <HeaderLabel>
+          {imageList.map((img, index) => (
+            <img
+              key={index}
+              src={img.src}
+              alt={img.alt}
+              style={{ cursor: "pointer", width: "20px" }}
+            />
+          ))}
+        </HeaderLabel>
+
         <div className="text-content">
           <TextContent />
         </div>

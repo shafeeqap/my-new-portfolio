@@ -10,6 +10,11 @@
     padding: 0.3rem;
     gap: 5px;
 }
+.title-label p{
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
 
 /* Tablet */
 @media (min-width: 577px) and (max-width: 768px) {}
@@ -17,6 +22,7 @@
 /* Desktop */
 @media (min-width: 769px) {
     .title-label {
-        padding: 0.3rem;
+        padding: 0.5rem;
+        /* width: 150px; */
     }
 }

@@ -1,0 +1,39 @@
+.img-container {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.img-container img {
+    width: 150px;
+    opacity: 0.5;
+
+}
+
+.about-text-content {
+    position: relative;
+    max-width: 500px;
+    width: 300px;
+    animation: slideInRight 1s ease-out;
+}
+
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 768px) {
+    .img-container {
+        position: relative;
+    }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+
+    .img-container img {
+        width: 250px;
+    }
+
+    .about-text-content {
+        width: 400px;
+    }
+}

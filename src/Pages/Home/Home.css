@@ -1,117 +1,61 @@
-.container {
-    height: 100vh;
-    background: linear-gradient(to bottom right, #320456 30%, #0B0454);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    gap: 15px;
-}
 
 .content-wrapper {
-    padding: 15px;
-    margin-top: 30px;
-    animation: slideInLeft 1s ease-out;
+  padding: 15px;
+  margin-top: 30px;
+  animation: slideInLeft 1s ease-out;
 }
 
 .text-content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    animation: fadeInUp 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  animation: fadeInUp 1s ease-out;
 }
 
 .text-content small,
 .text-content h3,
 .text-content p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .image-container {
-    margin: 0;
-    animation: slideInRight 1s ease-out;
+  margin: 0;
+  animation: slideInRight 1s ease-out;
 }
 
 .image-container img {
-    width: 200px;
+  width: 200px;
 }
 
 .button-container {
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
 }
 
-/* Keyframes for fading in */
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Keyframes for sliding in from the left */
-  @keyframes slideInLeft {
-    from {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Keyframes for sliding in from the right */
-  @keyframes slideInRight {
-    from {
-      transform: translateX(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Keyframes for fading in and moving upward */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
 
-  
 /* Tablet */
 @media (min-width: 577px) and (max-width: 768px) {
-    .image-container img {
-        width: 350px;
-    }
+  .image-container img {
+    width: 350px;
+  }
 }
 
 /* Desktop */
 @media (min-width: 769px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-around;
-    }
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-    .text-content h3 {
-        font-size: x-large;
-        font-weight: 700;
-    }
+  .text-content h3 {
+    font-size: x-large;
+    font-weight: 700;
+  }
 
-    .image-container img {
-        width: 450px;
-    }
+  .image-container img {
+    width: 450px;
+  }
 }
