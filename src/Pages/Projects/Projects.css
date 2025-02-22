@@ -15,100 +15,12 @@
     padding: 40% 5%;
 }
 
-.project-item {
-    position: relative;
-    /* margin-bottom: 3.5rem; */
-}
-
-.project-content {
-    padding-top: 10px;
-    /* position: relative; */
-}
-
-.project-content.reverse {
-    flex-direction: row-reverse;
-    position: relative;
-}
-
-
-.project-image-box {
-    width: 280px;
-    height: 250px;
-    background-color: #7813C5;
-    margin-top: 25px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    display: flex;
-    justify-content: center;
-}
-
-.image-wrapper {
-    background-color: rgb(201, 60, 60);
-    width: 100%;
-    height: 200px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.description {
-    width: 280px;
-}
-
-/* Separator common styles */
-.separator {
-    position: absolute;
-    height: 0.5rem;
-    background-color: #7813C5;
-    border-radius: 15px;
-    top: 100%;
-    transform: translateY(-50%);
-}
-
-/* Left‐aligned separator – extend from the left side */
-.project-item.left .separator {
-    left: 0.1%;
-    width: 100%;
-}
-
-/* Right‐aligned separator – extend from the right side */
-.project-item.right .separator {
-    right: 0.1%;
-    width: 100%;
-}
 
 /* Tablet */
 @media (min-width: 577px) and (max-width: 768px) {
-    .project-image-box {
-        width: 290px;
-        height: 250px;
-    }
 
     .project-content-wrapper {
         padding: 25%;
-    }
-
-    .description {
-        width: 290px;
-    }
-
-    .project-item.left .separator {
-        left: 0.1%;
-        width: 150%;
-    }
-
-    .project-item.right .separator {
-        right: 0.1%;
-        width: 150%;
     }
 }
 
@@ -119,38 +31,4 @@
         padding: 15%;
     }
 
-    .project-content {
-        display: flex;
-        justify-content: space-around;
-        gap: 50px;
-        position: relative;
-    }
-
-    .project-image-box {
-        width: 290px;
-        height: 250px;
-        margin-bottom: 5%;
-    }
-
-    .image-wrapper {
-        height: 200px;
-    }
-
-    .project-details {
-        margin-top: 2rem;
-    }
-
-    .description {
-        width: 450px;
-    }
-
-    .project-item.left .separator {
-        left: -0.1%;
-        width: 130%;
-    }
-
-    .project-item.right .separator {
-        right: -0.1%;
-        width: 130%;
-    }
 }
