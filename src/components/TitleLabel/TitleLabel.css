@@ -9,6 +9,7 @@
     align-items: center;
     padding: 0.3rem;
     gap: 5px;
+    margin-bottom: 15px;
 }
 .title-label p{
     margin: 0;

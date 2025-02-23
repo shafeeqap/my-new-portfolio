@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
 import './TitleLabel.css'
 
-const HeaderLabel = ({ children, style }) => {
+const TitleLabel = ({ children, style }) => {
   return (
     <div className="title-label" style={style}>
       {children}
     </div>
   );
 };
-HeaderLabel.propTypes = {
+TitleLabel.propTypes = {
   children: PropTypes.node.isRequired,
   style: PropTypes.object,
 };
-export default HeaderLabel;
+export default TitleLabel;

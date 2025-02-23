@@ -1,6 +1,6 @@
 import TitleLabel from "../../components/TitleLabel/TitleLabel";
 import "./Projects.css";
-import { project_content } from "../../static/data";
+import { project_content } from "../../data/projectContent";
 import ProjectContent from "./ProjectContent/ProjectContent";
 
 const Projects = () => {

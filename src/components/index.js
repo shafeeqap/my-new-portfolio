@@ -1,0 +1,11 @@
+export { default as Button } from "./Button/Button";
+export { default as Drawer } from "./Drawer/Drawer";
+export { default as Header } from "./Header/Header";
+export { default as Footer } from "./Footer/Footer";
+export { default as Logo } from "./Logo/Logo";
+export { default as NavItems } from "./NavItems/NavItems";
+export { default as TitleLabel } from "./TitleLabel/TitleLabel";
+export { default as ToolTipp } from "./ToolTipp/ToolTipp";
+export { default as Welcome } from "./Welcome/Welcome";
+export { default as AboutMe } from "./AboutMe/AboutMe";
+export { default as Contacts } from "./Contacts/Contacts";

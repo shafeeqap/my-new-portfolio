@@ -3,8 +3,8 @@ import Logo from "../Logo/Logo";
 import "./Header.css";
 import { MdMenu } from "react-icons/md";
 import Drawer from "../Drawer/Drawer";
-import { nav_items } from "../../static/data";
 import NavItems from "../NavItems/NavItems";
+import { nav_items } from "../../data/navItemsData";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./ProjectContent.css";
-import { flip_card_icons } from "../../../static/data";
 import Tooltipp from "../../../components/ToolTipp/ToolTipp";
+import { flip_card_icons } from "../../../data/flipCardIcons";
 
 const ProjectContent = ({
   index,

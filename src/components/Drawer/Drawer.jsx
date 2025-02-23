@@ -1,7 +1,7 @@
 import "./Drawer.css";
 import PropTypes from "prop-types";
 import NavItems from "../NavItems/NavItems";
-import { nav_items } from "../../static/data";
+import { nav_items } from "../../data/navItemsData";
 
 const Drawer = ({ isOpen, onClose }) => {
   return (

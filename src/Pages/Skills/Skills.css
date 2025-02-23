@@ -1,0 +1,121 @@
+main {
+    background-color: #320456;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+    color: white;
+}
+
+.skills-bg-image-container {
+    opacity: 0.5;
+    max-width: 200px;
+    display: none;
+}
+
+.skills-content-wrapper {
+    width: 100%;
+}
+
+.skills-text-content {
+    min-width: 330px;
+}
+
+.skills-box-container {
+    border-radius: 5px;
+    background-color: #7813C5;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.skills-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-size: 10PX;
+    max-width: 100px;
+    min-height: 60px;
+    width: 50px;
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    padding: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.skills-image-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    object-fit: cover;
+}
+
+.skills-box img {
+    max-width: 70px;
+    width: 50px;
+}
+.skills{
+    display: flex;
+    justify-content: end;
+    padding: 0 5px;
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 768px) {}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .skills-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        gap: 10px;
+        padding: 25px;
+    }
+
+    .skills-content-wrapper {
+        width: 65%;
+    }
+
+    .skills-bg-image-container {
+        display: flex;
+    }
+
+    .skills-bg-image-container img {
+        width: 350px;
+    }
+
+    .skills-text-content {
+        width: 80%;
+    }
+
+    .skills-box-container {
+        width: 90%;
+    }
+
+    .skills-box {
+        width: 60PX;
+        min-height: 80px;
+    }
+
+    .skills-box img {
+        min-width: 60px;
+    }
+}
