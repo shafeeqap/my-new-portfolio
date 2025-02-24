@@ -17,9 +17,9 @@ import mui from "../assets/svg/skills/mui.svg";
 import tailwindcss from "../assets/svg/skills/tailwindcss.svg";
 
 export const skillsImage = (skill) => {
-  const skillID = skill.toLowerCase();
+  const skillId = skill.toLowerCase();
 
-  switch (skillID) {
+  switch (skillId) {
     case "html":
       return html;
     case "css":

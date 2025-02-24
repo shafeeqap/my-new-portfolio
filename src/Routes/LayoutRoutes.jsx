@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { AboutMe, Contacts, Footer, Header } from "../components";
+import { AboutMe, Contacts, Education, Footer, Header } from "../components";
 import { Home, Projects, Skills } from "../Pages";
 
 
@@ -12,6 +12,7 @@ const LayoutRoutes = () => {
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/education" element={<Education />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
       <Footer/>

@@ -16,6 +16,10 @@ export const nav_items = [
     display: "Skills",
   },
   {
+    path: "/education",
+    display: "Education",
+  },
+  {
     path: "/contacts",
     display: "Contacts",
   },

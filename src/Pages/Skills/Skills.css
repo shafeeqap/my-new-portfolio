@@ -51,7 +51,6 @@ main {
     min-height: 60px;
     width: 50px;
     background-color: white;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
     border-radius: 5px;
     padding: 8px;
     margin-right: 8px;
@@ -104,10 +103,6 @@ main {
 
     .skills-text-content {
         width: 80%;
-    }
-
-    .skills-box-container {
-        width: 90%;
     }
 
     .skills-box {

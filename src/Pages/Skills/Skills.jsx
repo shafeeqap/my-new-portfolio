@@ -1,9 +1,9 @@
 import "./Skills.css";
 import bgImg from "../../assets/bgImages/skillsBg.png";
-import TitleLabel from "../../components/TitleLabel/TitleLabel";
 import Marquee from "react-fast-marquee";
 import { skillsData } from "../../data/skillsData";
 import { skillsImage } from "../../utils/skillsImages";
+import TitleContent from "../../components/TitleContent/TitleContent";
 
 const Skills = () => {
   return (
@@ -13,17 +13,8 @@ const Skills = () => {
           <img src={bgImg} alt="bgimage" />
         </div>
         <div className="skills-content-wrapper">
-          <div className="skills-text-content">
-            <TitleLabel>
-              <p>Skills</p>
-            </TitleLabel>
-            <p>
-              Experienced and versatile professional with a strong foundation in
-              both digital designing and computer coding. Proficient in
-              utilizing industry-standard design tools to create visually
-              captivating graphics, user interfaces, and digital content.
-            </p>
-          </div>
+          <TitleContent title={"skills"} />
+
           <div className="skills-box-container">
             <Marquee
               gradient={false}

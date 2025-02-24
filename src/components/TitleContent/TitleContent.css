@@ -1,0 +1,13 @@
+.title-content {
+    min-width: 330px;
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 768px) {}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .title-content {
+        width: 100%;
+    }
+}
