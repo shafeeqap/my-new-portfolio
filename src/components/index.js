@@ -11,3 +11,4 @@ export { default as AboutMe } from "./AboutMe/AboutMe";
 export { default as Contacts } from "./Contacts/Contacts";
 export { default as Education } from "./Education/Education";
 export { default as ViewAll } from "./ViewAll/ViewAll";
+export { default as Skills } from "./Skills/Skills";

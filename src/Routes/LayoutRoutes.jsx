@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import { AboutMe, Contacts, Education, Footer, Header } from "../components";
-import { Home, Projects, Skills } from "../Pages";
+import { AboutMe, Contacts, Education, Footer, Header, Skills } from "../components";
+import { Home, Projects } from "../Pages";
 
 
 const LayoutRoutes = () => {

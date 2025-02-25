@@ -3,7 +3,7 @@ import bgImg from "../../assets/bgImages/skillsBg.png";
 import Marquee from "react-fast-marquee";
 import { skillsData } from "../../data/skillsData";
 import { skillsImage } from "../../utils/skillsImages";
-import TitleContent from "../../components/TitleContent/TitleContent";
+import TitleContent from "../TitleContent/TitleContent";
 
 const Skills = () => {
   return (

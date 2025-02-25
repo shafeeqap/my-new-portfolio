@@ -1,7 +1,8 @@
-import { AboutMe, Contacts, Education, Welcome } from "../../components";
+import { AboutMe, Contacts, Education, Skills, Welcome } from "../../components";
+
 
 import Projects from "../Projects/Projects";
-import Skills from "../Skills/Skills";
+
 
 const Home = () => {
   return (
