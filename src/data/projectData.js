@@ -2,7 +2,7 @@ import Project_image from "../assets/images/Project_image.jpg";
 import project_02 from "../assets/images/project-01.jpg";
 import project_03 from "../assets/images/project-03.jpg";
 
-export const project_content = [
+export const projectData = [
   {
     src: Project_image,
     title: "E-commerce platform",

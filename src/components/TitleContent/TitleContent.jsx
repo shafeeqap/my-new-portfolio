@@ -12,7 +12,9 @@ const TitleContent = ({ title }) => {
         <TitleLabel>
           <p>{data.title}</p>
         </TitleLabel>
-        <p>{data.description}</p>
+        <div className="title-description">
+          <p>{data.description}</p>
+        </div>
       </>
     </div>
   );

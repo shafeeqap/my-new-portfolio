@@ -1,0 +1,9 @@
+.text-content-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.name-wrapper{
+    display: flex;
+    gap: 8px;
+}

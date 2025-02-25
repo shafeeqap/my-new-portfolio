@@ -1,10 +1,11 @@
-import TextContent from "./TextContent";
 import { home_icons } from "../../data/homeIcons";
 import { home_buttonList } from "../../data/homeButtonList";
 import Button from "../Button/Button";
 import TitleLabel from "../TitleLabel/TitleLabel";
 import homePageImage from "../../assets/images/homePageImage.png";
 import "./Welcome.css";
+import { homeData } from "../../data/homeData";
+import TextContent from "./TextContent/TextContent";
 
 const Welcome = () => {
   return (
@@ -23,7 +24,15 @@ const Welcome = () => {
           </TitleLabel>
 
           <div className="text-content">
-            <TextContent />
+            {homeData.map((item, index) => (
+              <TextContent
+                key={index}
+                greet={item.greet}
+                be={item.be}
+                name={item.name}
+                description={item.description}
+              />
+            ))}
           </div>
           <div className="button-container">
             {home_buttonList.map((btn, index) => (

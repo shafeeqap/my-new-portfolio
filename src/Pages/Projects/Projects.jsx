@@ -1,7 +1,8 @@
 import TitleLabel from "../../components/TitleLabel/TitleLabel";
 import "./Projects.css";
-import { project_content } from "../../data/projectContent";
-import ProjectContent from "./ProjectContent/ProjectContent";
+import { projectData } from "../../data/projectData";
+import SingleProject from "./SingleProject/SingleProject";
+import ViewAll from "../../components/ViewAll/ViewAll";
 
 const Projects = () => {
   return (
@@ -13,8 +14,8 @@ const Projects = () => {
           </TitleLabel>
         </div>
 
-        {project_content.map((item, index) => (
-          <ProjectContent
+        {projectData.slice(0, 2).map((item, index) => (
+          <SingleProject
             key={index}
             index={index}
             src={item.src}
@@ -24,6 +25,8 @@ const Projects = () => {
             description={item.description}
           />
         ))}
+
+        {projectData.length > 2 && <ViewAll marginTop={20} />}
       </div>
     </div>
   );

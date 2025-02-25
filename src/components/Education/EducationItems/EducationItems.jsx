@@ -1,16 +1,23 @@
-import PropTypes from "prop-types";
-import './EducationItems.css'
+import PropTypes, { string } from "prop-types";
+import "./EducationItems.css";
 
-
-const EducationItems = ({ icon, education }) => {
+const EducationItems = ({
+  icon,
+  institution,
+  course,
+  startYear,
+  endYear,
+}) => {
   return (
     <>
       <div className="edu-item-wrapper">
-        <div className="icon-wrapper">
+        <div className="icon-circle">
           <img src={icon} alt="icon" />
         </div>
         <div className="edu-item-text">
-          <small>{education}</small>
+          <p >{course}</p>
+          <small>{startYear}-{endYear}</small>
+          <h5 >{institution}</h5>
         </div>
       </div>
     </>
@@ -19,6 +26,9 @@ const EducationItems = ({ icon, education }) => {
 
 EducationItems.propTypes = {
   icon: PropTypes.string,
-  education: PropTypes.string,
+  institution: PropTypes.string,
+  course: PropTypes.string,
+  startYear: PropTypes.number,
+  endYear: PropTypes.number || string,
 };
 export default EducationItems;

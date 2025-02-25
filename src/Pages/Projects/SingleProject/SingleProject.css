@@ -16,13 +16,10 @@
 
 .flip-card {
     perspective: 1000px;
-    width: 290px;
     height: 250px;
 }
 
 .flip-card-front {
-    width: 290px;
-    height: 250px;
     background-color: #7813C5;
     margin-top: 25px;
     border-top-left-radius: 15px;
@@ -30,11 +27,9 @@
 }
 
 
-
 /* The inner wrapper that will be rotated */
 .flip-card-inner {
     position: relative;
-    width: 100%;
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
@@ -49,7 +44,6 @@
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    width: 100%;
     height: 100%;
     backface-visibility: hidden;
     border-top-left-radius: 15px;
@@ -60,7 +54,7 @@
 .image-wrapper {
     background-color: rgb(201, 60, 60);
     width: 100%;
-    height: 200px;
+    height: 80%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     display: flex;
@@ -69,8 +63,13 @@
     overflow: hidden;
 }
 
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .techstack {
-    min-width: 150px;
     width: 100%;
     height: 100%;
 }
@@ -97,7 +96,7 @@
     border-radius: 5px;
 }
 
-.flip-card-icons-wrapper {
+.flip-card-icons-circle {
     border-radius: 50%;
     background-color: rgb(161, 161, 161);
     width: 30px;
@@ -109,7 +108,7 @@
     cursor: pointer;
 }
 
-.flip-card-icons-wrapper:hover {
+.flip-card-icons-circle:hover {
     background-color: rgb(138, 137, 137);
 }
 
@@ -127,15 +126,10 @@ p {
     max-width: 300px;
     max-height: 150px;
     overflow-y: auto;
-    word-wrap: break-word; /* Ensure long words break to fit the container */
+    word-wrap: break-word;
+    /* Ensure long words break to fit the container */
     padding: 8px;
     margin: 0;
-}
-
-.image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .project-details {
@@ -143,7 +137,7 @@ p {
 }
 
 .description {
-    width: 290px;
+    width: 100%;
 }
 
 /* Separator common styles */
@@ -175,10 +169,6 @@ p {
 
 /* Tablet */
 @media (min-width: 577px) and (max-width: 768px) {
-    .project-image-box {
-        width: 290px;
-        height: 250px;
-    }
 
     .description {
         width: 290px;
@@ -197,7 +187,6 @@ p {
 
 /* Desktop */
 @media (min-width: 769px) {
-
     .project-content {
         display: flex;
         justify-content: space-around;
@@ -205,15 +194,8 @@ p {
         position: relative;
         margin-bottom: 4rem;
     }
-
-    .project-image-box {
+    .flip-card{
         width: 290px;
-        height: 250px;
-        margin-bottom: 5%;
-    }
-
-    .image-wrapper {
-        height: 200px;
     }
 
     .project-details {

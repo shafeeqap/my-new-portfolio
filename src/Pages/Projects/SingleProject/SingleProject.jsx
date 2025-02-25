@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-import "./ProjectContent.css";
 import Tooltipp from "../../../components/ToolTipp/ToolTipp";
 import { flip_card_icons } from "../../../data/flipCardIcons";
+import "./SingleProject.css";
 
-const ProjectContent = ({
+const SingleProject = ({
   index,
   src,
   title,
@@ -36,8 +36,8 @@ const ProjectContent = ({
                 {flip_card_icons.map((icon, index) => (
                   <>
                     <Tooltipp text={icon.name}>
-                      <div className="flip-card-icons-wrapper" key={index}>
-                        <img src={icon.src} alt="live" />
+                      <div className="flip-card-icons-circle" key={index}>
+                        <img src={icon.src} alt="flipCardIcons" />
                       </div>
                     </Tooltipp>
                   </>
@@ -59,7 +59,7 @@ const ProjectContent = ({
   );
 };
 
-ProjectContent.propTypes = {
+SingleProject.propTypes = {
   index: PropTypes.number,
   src: PropTypes.string,
   title: PropTypes.string,
@@ -69,4 +69,4 @@ ProjectContent.propTypes = {
   style: PropTypes.string,
 };
 
-export default ProjectContent;
+export default SingleProject;
