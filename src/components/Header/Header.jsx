@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Logo from "../Logo/Logo";
-import "./Header.css";
 import { MdMenu } from "react-icons/md";
+import { nav_items } from "../../data/navItemsData";
 import Drawer from "../Drawer/Drawer";
 import NavItems from "../NavItems/NavItems";
-import { nav_items } from "../../data/navItemsData";
+import Logo from "../../assets/Logo/Logo";
+import "./Header.css";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);

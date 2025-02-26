@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Tooltipp from "../../../components/ToolTipp/ToolTipp";
+import { ToolTipp } from "../../../components";
 import { flip_card_icons } from "../../../data/flipCardIcons";
 import "./SingleProject.css";
 
@@ -18,8 +18,8 @@ const SingleProject = ({
 
   return (
     <div className={`project-item ${customClass}`}>
-      <div className={`project-content ${directionClass}`} style={style}>
-        <div className="flip-card">
+      <div className={`project-content ${directionClass}`} >
+        <div className="flip-card" >
           <div className="flip-card-inner">
             <div className="flip-card-front">
               <div className="image-wrapper">
@@ -35,11 +35,11 @@ const SingleProject = ({
               <div className="flip-card-icons">
                 {flip_card_icons.map((icon, index) => (
                   <>
-                    <Tooltipp text={icon.name}>
+                    <ToolTipp text={icon.name}>
                       <div className="flip-card-icons-circle" key={index}>
                         <img src={icon.src} alt="flipCardIcons" />
                       </div>
-                    </Tooltipp>
+                    </ToolTipp>
                   </>
                 ))}
               </div>
@@ -54,7 +54,7 @@ const SingleProject = ({
           </div>
         </div>
       </div>
-      <div className="separator"></div>
+      <div className="separator" style={{top:style}}></div>
     </div>
   );
 };

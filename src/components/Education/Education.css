@@ -30,6 +30,7 @@
     background-color: #7813C5;
     border-radius: 5px;
     padding: 5px;
+    /* margin-bottom: 1rem; */
     transition: transform 0.3s ease;
 }
 
@@ -79,6 +80,9 @@
 
     .education-text-wrapper{
         width: 50%;
+    }
+    .education-display-box{
+        /* width: 70%; */
     }
 
 }

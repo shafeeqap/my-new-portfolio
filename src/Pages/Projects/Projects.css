@@ -6,6 +6,7 @@
     color: white;
     gap: 15px;
     padding: 5%;
+
 }
 
 .project-content-wrapper {
@@ -14,7 +15,6 @@
     justify-content: center;
     padding: 40% 5%;
 }
-
 
 
 /* Tablet */
@@ -29,7 +29,9 @@
 @media (min-width: 769px) {
 
     .project-content-wrapper {
-        padding: 15%;
+        padding: 10%;
+        overflow: auto;
+
     }
 
 }

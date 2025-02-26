@@ -42,6 +42,25 @@ body {
   display: none;
 }
 
+
+.viewAll-btn {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+}
+
+.viewAll-btn {
+  display: flex;
+  justify-content: end;
+}
+
+.view-align-eye {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+
 /* Keyframes for fading in */
 @keyframes fadeIn {
   from {
@@ -91,7 +110,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 
 /* Tablet */

@@ -2,6 +2,7 @@ import "./AboutMe.css";
 import bgImage from "../../assets/images/creative.png";
 import TitleContent from "../TitleContent/TitleContent";
 
+
 const AboutMe = () => {
   return (
     <div className="container">
@@ -9,7 +10,7 @@ const AboutMe = () => {
         <img src={bgImage} alt="bg-image" />
       </div>
       <div className="about-text-content">
-        <TitleContent title={'howIam'}/>
+        <TitleContent title={"howIam"} />
       </div>
     </div>
   );

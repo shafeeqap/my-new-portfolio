@@ -15,10 +15,10 @@ export const nav_items = [
     path: "/skills",
     display: "Skills",
   },
-  {
-    path: "/education",
-    display: "Education",
-  },
+  // {
+  //   path: "/education",
+  //   display: "Education",
+  // },
   {
     path: "/contacts",
     display: "Contacts",
