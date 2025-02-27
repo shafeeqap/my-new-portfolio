@@ -38,9 +38,11 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -8px; /* adjust the distance below the main box */
+    bottom: -8px;
+    /* adjust the distance below the main box */
     width: 99.9%;
-    height: 10px; /* the “box” height */
+    height: 10px;
+    /* the “box” height */
     background-color: #401ff7;
     border-radius: 0 0 20px 20px;
     opacity: 0;
@@ -56,14 +58,13 @@
 }
 
 
-/* Tablet */
-@media (min-width: 577px) and (max-width: 768px) {
+/* Tablet (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 1024px) {}
 
-}
 
-/* Desktop */
-@media (min-width: 769px) {
-    .education-content-wrapper{
+/* Desktop (smaller screens and up) */
+@media (min-width: 1025px) {
+    .education-content-wrapper {
         flex-direction: row;
         justify-content: space-around;
         margin: 7.5rem;
@@ -78,10 +79,11 @@
         opacity: 0.5;
     }
 
-    .education-text-wrapper{
+    .education-text-wrapper {
         width: 50%;
     }
-    .education-display-box{
+
+    .education-display-box {
         /* width: 70%; */
     }
 

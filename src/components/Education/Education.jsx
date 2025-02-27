@@ -49,7 +49,7 @@ const Education = () => {
       <Modal
         isOpen={isModalOpen}
         onClose={handleModalClose}
-        title="Education"
+        title="Education Details"
       >
         {educationData.map((edu, index) => (
           <div

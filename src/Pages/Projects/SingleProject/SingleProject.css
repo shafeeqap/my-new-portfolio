@@ -168,19 +168,21 @@ p {
 }
 
 
-/* Tablet */
-@media (min-width: 577px) and (max-width: 768px) {
+/* Tablet (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 1024px) {
 
     .flip-card {
-        width: 290px;
+        width: 300px;
         margin-bottom: 10px;
     }
-    .project-content {
-        /* width: 80%; */
-    }
+
     .flip-card-front,
     .flip-card-back{
-        width: 290px;
+        width: 300px;
+    }
+
+    .project-details {
+        margin-top: 2rem;
     }
 
     .description {
@@ -198,8 +200,8 @@ p {
     }
 }
 
-/* Desktop */
-@media (min-width: 769px) {
+/* Desktop (smaller screens and up) */
+@media (min-width: 1025px) {
     .project-content {
         display: flex;
         gap: 50px;

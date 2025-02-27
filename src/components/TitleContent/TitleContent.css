@@ -6,11 +6,11 @@
     max-width: 100%;
 }
 
-/* Tablet */
-@media (min-width: 577px) and (max-width: 768px) {}
+/* Tablet (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 1024px) {}
 
-/* Desktop */
-@media (min-width: 769px) {
+/* Desktop (smaller screens and up) */
+@media (min-width: 1025px) {
     .title-content {
         width: 100%;
     }

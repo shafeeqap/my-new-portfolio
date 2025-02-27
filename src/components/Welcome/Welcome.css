@@ -28,16 +28,16 @@
 
 
 
-/* Tablet */
-@media (min-width: 577px) and (max-width: 768px) {
+/* Tablet (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 1024px) {
     .content-wrapper {
         gap: 5rem;
         margin-top: 150px;
     }
 }
 
-/* Desktop */
-@media (min-width: 769px) {
+/* Desktop (smaller screens and up) */
+@media (min-width: 1025px) {
     .container {
         flex-direction: row;
         justify-content: space-around;

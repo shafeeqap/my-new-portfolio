@@ -48,8 +48,8 @@ const SingleProject = ({
         </div>
 
         <div className="project-details" style={{ textAlign }}>
-          <h3>{title}</h3>
           <div className="description">
+          <h3>{title}</h3>
             <p>{description}</p>
           </div>
         </div>

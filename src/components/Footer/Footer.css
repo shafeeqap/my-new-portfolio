@@ -1,0 +1,16 @@
+/* Base (Mobile) Styles */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    background-color: #15104A;
+    color: white;
+    border-top: solid 1px #0A2E71;
+}
+
+/* Tablet (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 1024px) {}
+
+/* Desktop (smaller screens and up) */
+@media (min-width: 1025px) {}
