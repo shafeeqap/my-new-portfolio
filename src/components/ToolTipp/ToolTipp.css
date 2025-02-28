@@ -16,7 +16,7 @@
     z-index: 1;
     top: 100%;
     left: 100%;
-    transform: translateX(-90%);
+    transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
     transition-delay: 0.3s;

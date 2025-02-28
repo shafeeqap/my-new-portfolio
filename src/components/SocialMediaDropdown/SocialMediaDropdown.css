@@ -1,0 +1,50 @@
+.social-media-dropdown img {
+    width: 30px;
+    max-width: 50px;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu li:hover {
+    transform: scale(1.05);
+}
+
+/* Tablet (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 1024px) {
+    .dropdown-menu{
+        left: 18px;
+    }
+}
+
+
+/* Desktop (smaller screens and up) */
+@media (min-width: 1025px) {
+    .dropdown-menu {
+        left: 18px;
+    }
+}

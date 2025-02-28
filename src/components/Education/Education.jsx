@@ -36,7 +36,7 @@ const Education = () => {
             {educationData.length > 2 && (
               <div className="viewAll-btn">
                 <Button size="small" onClick={handleModalOpen}>
-                  <div className="view-align-eye">
+                  <div className="btn-align-icon">
                     View All <IoEyeOutline size={18} />
                   </div>
                 </Button>

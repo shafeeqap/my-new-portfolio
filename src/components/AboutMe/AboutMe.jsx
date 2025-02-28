@@ -1,13 +1,13 @@
-import "./AboutMe.css";
-import bgImage from "../../assets/images/creative.png";
+import aboutMebgImage from "../../assets/bgImages/aboutMeBgImage.png";
 import TitleContent from "../TitleContent/TitleContent";
+import "./AboutMe.css";
 
 
 const AboutMe = () => {
   return (
     <div className="container">
       <div className="img-container">
-        <img src={bgImage} alt="bg-image" />
+        <img src={aboutMebgImage} alt="bg-image" />
       </div>
       <div className="about-text-content">
         <TitleContent title={"howIam"} />

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Tooltipp.css";
 import PropTypes from "prop-types";
 
-const Tooltipp = ({ children, text }) => {
+const ToolTipp = ({ children, text }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const showTooltip = () => {
@@ -25,8 +25,8 @@ const Tooltipp = ({ children, text }) => {
   );
 };
 
-Tooltipp.propTypes = {
+ToolTipp.propTypes = {
   children: PropTypes.node.isRequired,
   text: PropTypes.string,
 };
-export default Tooltipp;
+export default ToolTipp;

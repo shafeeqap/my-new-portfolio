@@ -18,25 +18,19 @@
 
 .social-media-icons-vertical {
     padding-left: 8px;
-    /* background-color: yellow; */
     width: 30px;
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    justify-items: center;
-}
-
-.social-media-icons-vertical img {
-    width: 30px;
-    max-width: 50px;
-    object-fit: cover;
+    align-items: center;
+    position: relative;
+/* background-color: red; */
 }
 
 .contact-inform {
     display: flex;
     width: 300px;
-    /* margin: 5rem; */
 }
 
 .contact-image-container {
@@ -75,11 +69,13 @@
     flex-direction: column;
     justify-content: center;
     gap: 15px;
+    z-index: 1;
 }
 
 .icon-box {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .contactForm {
@@ -89,32 +85,15 @@
     z-index: 1;
 }
 
-.form-container {
-    max-width: 600px;
-}
 
-.form-container form {
-    margin: 0;
-    padding: 0;
-}
 
-.form-group {
-    margin: 10px 0;
-    width: 100%;
-}
-
-input,
-textarea {
-    padding: 10px;
-    border-radius: 0;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
-}
 
 /* Tablet (portrait and landscape) */
 @media (min-width: 577px) and (max-width: 1024px) {
-
+    .social-media-icons-vertical{
+        height: 70vh;
+        width: 70px;
+    }
     .contact-body {
         margin: 7rem;
         gap: 5rem;
@@ -143,6 +122,7 @@ textarea {
 
     .contact-icons-box {
         flex-direction: row;
+        justify-content: flex-start;
     }
 
     .icon-box {
@@ -161,43 +141,52 @@ textarea {
         width: 100%;
     }
 
-    .form-container {
-        width: 100%;
-    }
 }
 
 /* Desktop (smaller screens and up) */
 @media (min-width: 1025px) {
     .social-media-icons-vertical {
-        width: 50px;
+        width: 100px;
     }
 
+    .contact-body-content{
+        /* background-color: black; */
+        width: 60%;
+    }
     .contact-body {
         justify-content: left;
-        gap: 10rem;
+        gap: 20rem;
         margin: 10rem;
     }
 
     .contact-inform {
-        width: 500px;
-        justify-content: center;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .contact-image-container {
         display: flex;
         position: absolute;
         top: 100;
-        left: 10;
+        left: 10rem;
         width: 50%;
     }
 
     .contact-image-container img {
-        width: 450px;
+        width: 350px;
         opacity: 0.1;
+        object-fit: contain;
+    }
+
+    .contact-header-wrapper {
+        justify-content: flex-start;
+        width: 100%;
     }
 
     .contact-icons-box {
         flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .icon-box {
@@ -212,7 +201,5 @@ textarea {
 
     }
 
-    .form-container {
-        width: 100%;
-    }
+
 }

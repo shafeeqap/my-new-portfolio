@@ -1,5 +1,5 @@
 import "./Skills.css";
-import bgImg from "../../assets/bgImages/skillsBg.png";
+import skillBgImg from "../../assets/bgImages/skillsBg.png";
 import Marquee from "react-fast-marquee";
 import { skillsData } from "../../data/skillsData";
 import { skillsImage } from "../../utils/skillsImages";
@@ -10,7 +10,7 @@ const Skills = () => {
     <main>
       <div className="skills-container">
         <div className="skills-bg-image-container">
-          <img src={bgImg} alt="bgimage" />
+          <img src={skillBgImg} alt="bgimage" />
         </div>
         <div className="skills-content-wrapper">
           <TitleContent title={"skills"} />

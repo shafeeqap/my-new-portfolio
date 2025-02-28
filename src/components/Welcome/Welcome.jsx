@@ -2,7 +2,7 @@ import { home_icons } from "../../data/homeIcons";
 import { home_buttonList } from "../../data/homeButtonList";
 import Button from "../Button/Button";
 import TitleLabel from "../TitleLabel/TitleLabel";
-import homePageImage from "../../assets/images/homePageImage.png";
+import homePageImage from "../../assets/bgImages/homePageImage.png";
 import "./Welcome.css";
 import { homeData } from "../../data/homeData";
 import TextContent from "./TextContent/TextContent";

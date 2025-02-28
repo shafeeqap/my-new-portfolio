@@ -1,0 +1,45 @@
+/* Base (Mobile) Styles */
+
+.form-container {
+    max-width: 600px;
+}
+
+.form-container form {
+    margin: 0;
+    padding: 0;
+}
+
+.form-group {
+    margin: 10px 0;
+    width: 100%;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
+/* Tablet (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 1024px) {
+    .form-container {
+        width: 100%;
+    }
+}
+
+/* Desktop (smaller screens and up) */
+@media (min-width: 1025px) {
+    .form-container {
+        width: 100%;
+    }
+}
