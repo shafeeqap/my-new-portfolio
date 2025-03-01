@@ -14,11 +14,8 @@ export const contactsImageIcons = [
 ];
 
 export const contactSocialMediaImages = [
-  { src: linkedIn, alt: "LinkedIn" ,href:""},
-  { src: telegram, alt: "Telegram", href:"" },
-  { src: instagram, alt: "Instagram", href:"" },
-  { src: facebook, alt: "Facebook", href:"" },
+  { id: 1, src: linkedIn, alt: "LinkedIn", href: "" },
+  { id: 2, src: telegram, alt: "Telegram", href: "" },
+  { id: 3, src: instagram, alt: "Instagram", href: "" },
+  { id: 4, src: facebook, alt: "Facebook", href: "" },
 ];
-
-
-//  sheetAPI: ''

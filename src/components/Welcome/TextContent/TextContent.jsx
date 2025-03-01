@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import "./TextContent.css";
+import Typewriter from "typewriter-effect";
 
 const TextContent = ({ greet, be, name, description }) => {
   return (
@@ -11,7 +12,16 @@ const TextContent = ({ greet, be, name, description }) => {
           {name && <h3 style={{ color: "#7813C5" }}>{name}</h3>}
         </div>
       </div>
-      <p>{description}</p>
+      <p>
+        <Typewriter
+          options={{
+            autoStart: true,
+            loop: true,
+            delay: 50,
+            strings: description,
+          }}
+        />
+      </p>
     </>
   );
 };

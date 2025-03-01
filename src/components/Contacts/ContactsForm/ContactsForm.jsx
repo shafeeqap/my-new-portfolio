@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./ContactsForm.css";
 import { toast } from "react-toastify";
-import { validateForm } from "../../../utils/formValidation/formValidation";
+import { validateForm } from "../../../utils/validation/formValidation";
 
 const {
   VITE_EMAILJS_SERVICE_ID,

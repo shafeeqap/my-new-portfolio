@@ -16,13 +16,9 @@ const Drawer = ({ isOpen, onClose }) => {
 
         <div className="drawer-content">
           {nav_items.map((item, index) => (
-            <>
-              <div className="drawer-items" onClick={onClose}>
-                <NavItems key={index} to={item.path} >
-                  {item.display}
-                </NavItems>
-              </div>
-            </>
+            <div key={index} className="drawer-items" onClick={onClose}>
+              <NavItems to={item.path}>{item.display}</NavItems>
+            </div>
           ))}
         </div>
       </div>
