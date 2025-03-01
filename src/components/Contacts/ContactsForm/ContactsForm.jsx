@@ -1,16 +1,23 @@
 import Button from "../../Button/Button";
 import { IoIosSend } from "react-icons/io";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./ContactsForm.css";
-import { useState } from "react";
-import emailjs from "emailjs-com";
-const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } = import.meta
-  .env;
+import { toast } from "react-toastify";
+import { validateForm } from "../../../utils/formValidation/formValidation";
+
+const {
+  VITE_EMAILJS_SERVICE_ID,
+  VITE_EMAILJS_TEMPLATE_ID,
+  VITE_EMAILJS_PUBLIC_KEY,
+} = import.meta.env;
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+  const form = useRef();
 
   const handleContactForm = (e) => {
     e.preventDefault();
@@ -20,15 +27,17 @@ const ContactForm = () => {
     if (Object.keys(newErrors).length === 0) {
       emailjs
         .sendForm(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID,
-          e.target,
-          EMAILJS_USER_ID
+          VITE_EMAILJS_SERVICE_ID,
+          VITE_EMAILJS_TEMPLATE_ID,
+          form.current,
+          VITE_EMAILJS_PUBLIC_KEY
         )
         .then((result) => {
+          toast.success("Message sent successfully!");
           console.log("Message sent successfully!", result.text);
         })
         .catch((error) => {
+          toast.error("Error sending message:");
           console.error("Error sending message:", error.text);
         });
 
@@ -37,36 +46,18 @@ const ContactForm = () => {
       setMessage("");
     } else {
       console.log("Form submission failed due to validation errors.");
+      toast.error("Form submission failed due to validation errors.");
     }
-  };
-
-  const validateForm = (data) => {
-    const newErrors = {};
-
-    if (!data.name.trim()) {
-      newErrors.name = "Name is required";
-    }
-
-    if (!data.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
-      newErrors.email = "Email is invalid";
-    }
-
-    if (!data.message.trim()) {
-      newErrors.message = "Message is required";
-    }
-    return newErrors;
   };
 
   return (
     <div className="form-container">
-      <form onSubmit={handleContactForm}>
+      <form ref={form} onSubmit={handleContactForm}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
-            name="name"
+            name="user_name"
             value={name}
             placeholder="Name"
             onChange={(e) => setName(e.target.value)}
@@ -78,7 +69,7 @@ const ContactForm = () => {
           <label htmlFor="email">Email:</label>
           <input
             type="text"
-            name="email"
+            name="user_email"
             value={email}
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}

@@ -1,4 +1,4 @@
-import { AboutMe, Contacts, Education, Skills, Welcome } from "../../components";
+import { AboutMe, Contacts, Education, Skills, Welcome, ScrollToTopButton } from "../../components";
 import Projects from "../Projects/Projects";
 
 
@@ -11,6 +11,7 @@ const Home = () => {
       <Skills />
       <Education />
       <Contacts />
+      <div>{<ScrollToTopButton />}</div>
     </>
   );
 };
