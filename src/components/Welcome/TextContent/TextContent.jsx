@@ -12,7 +12,7 @@ const TextContent = ({ greet, be, name, description }) => {
           {name && <h3 style={{ color: "#7813C5" }}>{name}</h3>}
         </div>
       </div>
-      <p>
+      <div>
         <Typewriter
           options={{
             autoStart: true,
@@ -21,7 +21,7 @@ const TextContent = ({ greet, be, name, description }) => {
             strings: description,
           }}
         />
-      </p>
+      </div>
     </>
   );
 };

@@ -9,9 +9,8 @@ const TitleContent = ({ title }) => {
   return (
     <div className="title-content">
       <>
-        <TitleLabel>
-          <p>{data.title}</p>
-        </TitleLabel>
+        <TitleLabel text={data.title} />
+
         <div className="title-description">
           <p>{data.description}</p>
         </div>

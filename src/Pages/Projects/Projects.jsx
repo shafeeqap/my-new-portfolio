@@ -16,9 +16,7 @@ const Projects = () => {
       <div className="project-container">
         <div className="project-content-wrapper">
           <div>
-            <TitleLabel>
-              <p>Projects</p>
-            </TitleLabel>
+            <TitleLabel text={"Projects"} />
           </div>
 
           {projectData.slice(0, 2).map((item, index) => (
@@ -50,7 +48,7 @@ const Projects = () => {
           title={"Project Details"}
         >
           {projectData.map((item, index) => (
-            <div key={index} style={{padding:"25px"}}>
+            <div key={index} style={{ padding: "25px" }}>
               <SingleProject
                 key={index}
                 index={index}

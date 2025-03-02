@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { contactSocialMediaImages } from "../../data/contactsData";
+import { contactSocialMedia } from "../../data/contactsData";
 import { IoIosLink } from "react-icons/io";
 import "./SocialMediaDropdown.css";
 
@@ -20,9 +20,9 @@ const SocialMediaDropdown = () => {
       {isOpen && (
         <div className="dropdown-menu">
           <ul>
-            {contactSocialMediaImages.map((item, index) => (
+            {contactSocialMedia.map((item, index) => (
               <li key={index}>
-                <a href={item.href}>
+                <a href={item.href} target="_blank" rel="noreferrer">
                   <img src={item.src} alt={item.alt} />
                 </a>
               </li>

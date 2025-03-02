@@ -1,8 +1,8 @@
 import contactBgImage from "../../assets/bgImages/contactBg.png";
-import { contactsImageIcons } from "../../data/contactsData";
+import { contactsIcons } from "../../data/contactsData";
 import SocialMediaDropdown from "../SocialMediaDropdown/SocialMediaDropdown";
-import "./Contacts.css";
 import ContactForm from "./ContactsForm/ContactsForm";
+import "./Contacts.css";
 
 const Contacts = () => {
   return (
@@ -27,11 +27,26 @@ const Contacts = () => {
               </div>
 
               <div className="contact-icons-box">
-                {contactsImageIcons.map((item, index) => (
+                {contactsIcons.map((item, index) => (
                   <div key={index} className="icon-box">
-                    <div className="icon-circle">
-                      <img src={item.src} alt={item.alt} />
-                    </div>
+                    <a
+                      href={
+                        item.tel
+                          ? `tel: ${item.tel}`
+                          : item.mailto
+                          ? `mailto: ${item.mailto}`
+                          : item.href
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div
+                        className="icon-circle"
+                        style={{ cursor: "pointer" }}
+                      >
+                        <img src={item.src} alt={item.alt} />
+                      </div>
+                    </a>
                     <small>{item.info}</small>
                   </div>
                 ))}
