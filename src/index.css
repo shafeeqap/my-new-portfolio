@@ -72,6 +72,7 @@ body {
 }
 
 
+
 /* Keyframes for fading in */
 @keyframes fadeIn {
   from {
@@ -129,10 +130,11 @@ body {
     width: 350px;
     display: flex;
   }
+
   .icon-circle {
     width: 30px;
     height: 30px;
-}
+  }
 }
 
 /* Desktop (smaller screens and up) */
@@ -148,9 +150,10 @@ body {
     width: 450px;
     display: flex;
   }
+
   .icon-circle {
     width: 30px;
     height: 30px;
-}
+  }
 
 }

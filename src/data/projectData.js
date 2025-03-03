@@ -1,4 +1,4 @@
-import Project_image from "../assets/bgImages/Project_image.jpg";
+import Project_image from "../assets/bgImages/Project_1_logo.png";
 import project_02 from "../assets/bgImages/project-01.jpg";
 import project_03 from "../assets/bgImages/project-03.jpg";
 

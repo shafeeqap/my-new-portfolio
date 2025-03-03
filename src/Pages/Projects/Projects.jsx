@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Button, Modal, TitleLabel } from "../../components";
+import { Button, Modal, TitleContent } from "../../components";
 import { projectData } from "../../data/projectData";
 import SingleProject from "./SingleProject/SingleProject";
 import { IoEyeOutline } from "react-icons/io5";
 import "./Projects.css";
+
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +17,7 @@ const Projects = () => {
       <div className="project-container">
         <div className="project-content-wrapper">
           <div>
-            <TitleLabel text={"Projects"} />
+            <TitleContent title={"projects"} />
           </div>
 
           {projectData.slice(0, 2).map((item, index) => (

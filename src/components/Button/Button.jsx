@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
-import './Button.css'
+import "./Button.css";
+import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
+import { rotateIn } from "../../variants";
+
 const Button = ({
   onClick = undefined,
   children,
@@ -15,14 +18,16 @@ const Button = ({
   const disabledClass = isDisabled ? "button-disabled" : "";
   return (
     <>
-      <button
-        type={type}
-        onClick={onClick}
-        disabled={isDisabled}
-        className={`button ${variantClass} ${sizClass} ${disabledClass} ${className}`}
-      >
-        {children}
-      </button>
+      <AnimatedWrapper variant={rotateIn} delay={0.2}>
+        <button
+          type={type}
+          onClick={onClick}
+          disabled={isDisabled}
+          className={`button ${variantClass} ${sizClass} ${disabledClass} ${className}`}
+        >
+          {children}
+        </button>
+      </AnimatedWrapper>
     </>
   );
 };

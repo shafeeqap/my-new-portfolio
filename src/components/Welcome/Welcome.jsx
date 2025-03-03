@@ -8,6 +8,8 @@ import "./Welcome.css";
 import ToolTipp from "../ToolTipp/ToolTipp";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
+import { bounceIn, scaleFade } from "../../variants";
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -32,22 +34,30 @@ const Welcome = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="icon-circle">
+                    <AnimatedWrapper
+                      variant={bounceIn}
+                      delay={0.2}
+                      className="icon-circle"
+                    >
                       <img
                         src={item.src}
                         alt={item.alt}
                         style={{ cursor: "pointer" }}
                       />
-                    </div>
+                    </AnimatedWrapper>
                   </a>
                 </ToolTipp>
               </React.Fragment>
             ))}
           </div>
 
-          <div className="text-content">
+          <AnimatedWrapper
+            variant={scaleFade}
+            delay={0.2}
+            className="text-content"
+          >
             <TextContent {...homeData} />
-          </div>
+          </AnimatedWrapper>
 
           <div className="button-container">
             {home_buttonList.map((item) => (
@@ -63,9 +73,13 @@ const Welcome = () => {
           </div>
         </div>
 
-        <div className="image-container">
+        <AnimatedWrapper
+          variant={scaleFade}
+          delay={0.2}
+          className="image-container"
+        >
           <img src={homePageImage} alt="bg-image" />
-        </div>
+        </AnimatedWrapper>
       </div>
     </div>
   );

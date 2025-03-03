@@ -4,18 +4,29 @@ import Marquee from "react-fast-marquee";
 import { skillsData } from "../../data/skillsData";
 import { skillsImage } from "../../utils/skillsImages";
 import TitleContent from "../TitleContent/TitleContent";
+import { scaleFade } from "../../variants";
+import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
 
 const Skills = () => {
   return (
     <main>
       <div className="skills-container">
-        <div className="skills-bg-image-container">
-          <img src={skillBgImg} alt="bgimage" />
-        </div>
-        <div className="skills-content-wrapper">
-          <TitleContent title={"skills"} />
+        <AnimatedWrapper variant={scaleFade} delay={0.2}>
+          <div className="skills-bg-image-container">
+            <img src={skillBgImg} alt="bgimage" />
+          </div>
+        </AnimatedWrapper>
 
-          <div className="skills-box-container">
+        <div className="skills-content-wrapper">
+          <div>
+            <TitleContent title={"skills"} />
+          </div>
+
+          <AnimatedWrapper
+            variant={scaleFade}
+            delay={0.2}
+            className="skills-box-container"
+          >
             <Marquee
               gradient={false}
               speed={80}
@@ -36,7 +47,7 @@ const Skills = () => {
                 </div>
               ))}
             </Marquee>
-          </div>
+          </AnimatedWrapper>
         </div>
       </div>
     </main>

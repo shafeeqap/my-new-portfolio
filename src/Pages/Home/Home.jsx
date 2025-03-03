@@ -1,6 +1,13 @@
-import { AboutMe, Contacts, Education, Skills, Welcome, ScrollToTopButton } from "../../components";
+import {
+  AboutMe,
+  Contacts,
+  Education,
+  Skills,
+  Welcome,
+  ScrollToTopButton,
+} from "../../components";
 import Projects from "../Projects/Projects";
-
+import "./Home.css";
 
 const Home = () => {
   return (

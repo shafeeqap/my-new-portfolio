@@ -1,8 +1,9 @@
-import PropTypes from "prop-types";
-import { ExpandableText, ToolTipp } from "../../../components";
-import { flip_card_icons } from "../../../data/flipCardIcons";
-import "./SingleProject.css";
 import React from "react";
+import PropTypes from "prop-types";
+import { AnimatedWrapper, ExpandableText, ToolTipp } from "../../../components";
+import { flip_card_icons } from "../../../data/flipCardIcons";
+import { bounceIn } from "../../../variants";
+import "./SingleProject.css";
 
 const SingleProject = ({
   index,
@@ -18,7 +19,11 @@ const SingleProject = ({
   const textAlign = index % 2 === 0 ? "left" : "right";
 
   return (
-    <div className={`project-item ${customClass}`}>
+    <AnimatedWrapper
+      variant={bounceIn}
+      delay={0.3}
+      className={`project-item ${customClass}`}
+    >
       <div className={`project-content ${directionClass}`}>
         <div className="flip-card">
           <div className="flip-card-inner">
@@ -58,7 +63,7 @@ const SingleProject = ({
         </div>
       </div>
       <div className="separator" style={{ top: style }}></div>
-    </div>
+    </AnimatedWrapper>
   );
 };
 

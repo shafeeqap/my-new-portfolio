@@ -3,6 +3,8 @@ import { contactsIcons } from "../../data/contactsData";
 import SocialMediaDropdown from "../SocialMediaDropdown/SocialMediaDropdown";
 import ContactForm from "./ContactsForm/ContactsForm";
 import "./Contacts.css";
+import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
+import { scaleFade } from "../../variants";
 
 const Contacts = () => {
   return (
@@ -53,9 +55,9 @@ const Contacts = () => {
               </div>
             </div>
 
-            <div className="contactForm">
+            <AnimatedWrapper variant={scaleFade} delay={0.2} className="contactForm">
               <ContactForm />
-            </div>
+            </AnimatedWrapper>
           </div>
         </div>
       </div>

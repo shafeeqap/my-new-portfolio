@@ -5,6 +5,8 @@ import EducationItems from "./EducationItems/EducationItems";
 import { Button, Modal, TitleContent } from "../../components";
 import { IoEyeOutline } from "react-icons/io5";
 import { useState } from "react";
+import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
+import { scaleFade, fadeUp } from "../../variants";
 
 const Education = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,13 +18,22 @@ const Education = () => {
     <>
       <div className="container gradient">
         <div className="education-content-wrapper">
-          <div className="bg-img-wrapper">
-            <img src={bgImage} alt="bgImage" />
-          </div>
+          <AnimatedWrapper variant={scaleFade} delay={0.2}>
+            <div className="bg-img-wrapper">
+              <img src={bgImage} alt="bgImage" />
+            </div>
+          </AnimatedWrapper>
+
           <div className="education-text-wrapper">
             <TitleContent title={"education"} />
+
             {educationData.slice(0, 2).map((edu, index) => (
-              <div key={index} className="education-display-box">
+              <AnimatedWrapper
+                variant={fadeUp}
+                delay={0.2}
+                key={index}
+                className="education-display-box"
+              >
                 <EducationItems
                   icon={edu.icon}
                   institution={edu.institution}
@@ -30,7 +41,7 @@ const Education = () => {
                   startYear={edu.startYear}
                   endYear={edu.endYear}
                 />
-              </div>
+              </AnimatedWrapper>
             ))}
 
             {educationData.length > 2 && (
