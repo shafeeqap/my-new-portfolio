@@ -27,6 +27,8 @@ const Projects = () => {
               src={item.src}
               title={item.title}
               projectName={item.projectName}
+              gitHub={item.gitHub}
+              externalLink={item.externalLink}
               techStack={item.techStack}
               description={item.description}
             />
@@ -56,6 +58,8 @@ const Projects = () => {
                 src={item.src}
                 title={item.title}
                 projectName={item.projectName}
+                gitHub={item.gitHub}
+                externalLink={item.externalLink}
                 techStack={item.techStack}
                 description={item.description}
                 style={"110%"}

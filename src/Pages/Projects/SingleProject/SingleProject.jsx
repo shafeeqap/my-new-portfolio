@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { AnimatedWrapper, ExpandableText, ToolTipp } from "../../../components";
 import { flip_card_icons } from "../../../data/flipCardIcons";
@@ -12,6 +11,8 @@ const SingleProject = ({
   description,
   techStack,
   projectName,
+  gitHub,
+  externalLink,
   style,
 }) => {
   const customClass = index % 2 === 0 ? "left" : "right";
@@ -39,15 +40,26 @@ const SingleProject = ({
               </div>
 
               <div className="flip-card-icons">
-                {flip_card_icons.map((icon, index) => (
-                  <React.Fragment key={index}>
-                    <ToolTipp text={icon.name}>
-                      <div className="flip-card-icons-circle">
-                        <img src={icon.src} alt="flipCardIcons" />
-                      </div>
-                    </ToolTipp>
-                  </React.Fragment>
-                ))}
+                {flip_card_icons.map((icon, index) => {
+                  const linkUrl =
+                    icon.name === "GitHub"
+                      ? gitHub
+                      : icon.name === "External Link"
+                      ? externalLink
+                      : "";
+
+                  return (
+                    linkUrl && (
+                      <ToolTipp text={icon.name} key={index}>
+                        <a href={linkUrl} target="_blank" rel="noreferrer">
+                          <div className="flip-card-icons-circle">
+                            <img src={icon.src} alt="flipCardIcons" />
+                          </div>
+                        </a>
+                      </ToolTipp>
+                    )
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -57,7 +69,7 @@ const SingleProject = ({
           <div className="description">
             <h3>{title}</h3>
             <div>
-              <ExpandableText text={description} limit={100} />
+              <ExpandableText text={description} limit={300} />
             </div>
           </div>
         </div>
@@ -75,6 +87,8 @@ SingleProject.propTypes = {
   techStack: PropTypes.string,
   projectName: PropTypes.string,
   style: PropTypes.string,
+  gitHub: PropTypes.string,
+  externalLink: PropTypes.string,
 };
 
 export default SingleProject;

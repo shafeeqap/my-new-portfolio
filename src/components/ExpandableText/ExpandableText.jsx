@@ -10,9 +10,15 @@ const ExpandableText = ({ text, limit = 100 }) => {
     return <p>{text}</p>;
   }
 
+  let truncatedText = text.substring(0, limit);
+  const lastSpaceIndex = truncatedText.lastIndexOf(" ");
+  if (lastSpaceIndex > 0) {
+    truncatedText = truncatedText.substring(0, lastSpaceIndex);
+  }
+
   return (
     <p>
-      {isExpanded ? text : `${text.substring(0, limit)}`}
+      {isExpanded ? text : truncatedText}
       <span
         onClick={toggleExpand}
         style={{

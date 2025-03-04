@@ -2,9 +2,9 @@ import contactBgImage from "../../assets/bgImages/contactBg.png";
 import { contactsIcons } from "../../data/contactsData";
 import SocialMediaDropdown from "../SocialMediaDropdown/SocialMediaDropdown";
 import ContactForm from "./ContactsForm/ContactsForm";
-import "./Contacts.css";
 import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
-import { scaleFade } from "../../variants";
+import { bounceIn, scaleFade } from "../../variants";
+import "./Contacts.css";
 
 const Contacts = () => {
   return (
@@ -21,16 +21,16 @@ const Contacts = () => {
 
           <div className="contact-body-content">
             <div className="contact-header-wrapper">
-              <div className="contact-title">
+              <AnimatedWrapper variant={scaleFade} delay={0.2} className="contact-title">
                 <h1>
                   Let&apos;s <br />
                   Get <br /> In Touch
                 </h1>
-              </div>
+              </AnimatedWrapper>
 
               <div className="contact-icons-box">
                 {contactsIcons.map((item, index) => (
-                  <div key={index} className="icon-box">
+                  <AnimatedWrapper variant={bounceIn} delay={0.2} key={index} className="icon-box">
                     <a
                       href={
                         item.tel
@@ -50,7 +50,7 @@ const Contacts = () => {
                       </div>
                     </a>
                     <small>{item.info}</small>
-                  </div>
+                  </AnimatedWrapper>
                 ))}
               </div>
             </div>
