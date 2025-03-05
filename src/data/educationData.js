@@ -4,7 +4,7 @@ import computer from "../assets/svg/education/Computer_screen.svg";
 import hardware from "../assets/svg/education/hardware.svg";
 import network from '../assets/images/network.png'
 
-export const educationData = [
+const educationData = [
   {
     id: 1,
     icon: mern,
@@ -52,3 +52,5 @@ export const educationData = [
     education: "Diploma in computer hardware and networking",
   },
 ];
+
+export default educationData

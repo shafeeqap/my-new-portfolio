@@ -7,6 +7,10 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .swanky-and-moo-moo-regular {
   font-family: "Swanky and Moo Moo", serif;
   font-weight: 700;
@@ -29,6 +33,7 @@ body {
   align-items: center;
   color: white;
   gap: 15px;
+  position: relative;
 }
 
 .image-container {

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { contactSocialMedia } from "../../data/contactsData";
+import { contactSocialMedia } from "../../data";
 import { IoIosLink } from "react-icons/io";
-import "./SocialMediaDropdown.css";
 import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
 import { rotateIn, scaleFade } from "../../variants";
+import "./SocialMediaDropdown.css";
 
 const SocialMediaDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);

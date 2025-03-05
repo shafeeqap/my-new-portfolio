@@ -2,7 +2,7 @@ import email from "../assets/images/email_icon.png";
 import gitHub from "../assets/images/GitHubIcon.png";
 import linkedIn from "../assets/images/linkedin.png";
 
-export const home_icons = [
+const homeIcons = [
   {
     src: email,
     alt: "Email",
@@ -22,3 +22,5 @@ export const home_icons = [
     href: "http://www.linkedin.com/in/shafeeq-ap",
   },
 ];
+
+export default homeIcons

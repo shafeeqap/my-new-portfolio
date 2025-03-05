@@ -4,7 +4,7 @@ import pulseTalk from "../assets/bgImages/PulseTalk.png";
 import blueHarvest from "../assets/bgImages/BlueHarvest.png";
 import weatherWhiz from "../assets/bgImages/WeatherWhiz.png";
 
-export const projectData = [
+const projectData = [
   {
     id: 1,
     src: ecart,
@@ -63,3 +63,6 @@ export const projectData = [
     externalLink: "#",
   },
 ];
+
+
+export default projectData

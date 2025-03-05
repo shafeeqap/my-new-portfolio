@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./Button.css";
 import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
-import { fadeUp, rotateIn } from "../../variants";
+import { fadeUp } from "../../variants";
 
 const Button = ({
   onClick = undefined,
@@ -16,11 +16,10 @@ const Button = ({
   const sizClass =
     size === "small" ? "button-small" : size === "large" ? "button-large" : "";
   const disabledClass = isDisabled ? "button-disabled" : "";
-  const customVariant = size === "large" ? fadeUp : rotateIn;
 
   return (
     <>
-      <AnimatedWrapper variant={customVariant} delay={0.2}>
+      <AnimatedWrapper variant={fadeUp} delay={0.2}>
         <button
           type={type}
           onClick={onClick}

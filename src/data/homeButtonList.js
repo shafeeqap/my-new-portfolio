@@ -1,6 +1,6 @@
 import resumePdf from "../assets/pdf/Resume_full_stack.pdf";
 
-export const home_buttonList = [
+const homeButtonList = [
   { variant: "primary", size: "small", name: "Resume", path: resumePdf, external: true },
   {
     variant: "secondary",
@@ -9,3 +9,5 @@ export const home_buttonList = [
     path: "/contacts",
   },
 ];
+
+export default homeButtonList

@@ -1,6 +1,6 @@
 import "./Education.css";
 import bgImage from "../../assets/bgImages/educationBg.png";
-import { educationData } from "../../data/educationData";
+import { educationData } from "../../data";
 import EducationItems from "./EducationItems/EducationItems";
 import { Button, Modal, TitleContent } from "../../components";
 import { IoEyeOutline } from "react-icons/io5";
@@ -25,7 +25,9 @@ const Education = () => {
           </AnimatedWrapper>
 
           <div className="education-text-wrapper">
-            <TitleContent title={"education"} />
+            <AnimatedWrapper variant={scaleFade} delay={0.2}>
+              <TitleContent title={"education"} />
+            </AnimatedWrapper>
 
             {educationData.slice(0, 2).map((edu, index) => (
               <AnimatedWrapper

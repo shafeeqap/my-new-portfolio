@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { AnimatedWrapper, ExpandableText, ToolTipp } from "../../../components";
-import { flip_card_icons } from "../../../data/flipCardIcons";
+import { flipCardIcons } from "../../../data";
 import { bounceIn } from "../../../variants";
 import "./SingleProject.css";
 
@@ -40,7 +40,7 @@ const SingleProject = ({
               </div>
 
               <div className="flip-card-icons">
-                {flip_card_icons.map((icon, index) => {
+                {flipCardIcons.map((icon, index) => {
                   const linkUrl =
                     icon.name === "GitHub"
                       ? gitHub

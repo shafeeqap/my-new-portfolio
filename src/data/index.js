@@ -1,0 +1,11 @@
+export { default as contactsData } from "../data/contactsData";
+export { default as contactSocialMedia } from "../data/contactsSocialMediaData";
+export { default as educationData } from "../data/educationData";
+export { default as flipCardIcons } from "../data/flipCardIcons";
+export { default as homeButtonList } from "../data/homeButtonList";
+export { default as homeData } from "../data/homeData";
+export { default as homeIcons } from "../data/homeIcons";
+export { default as navItemsData } from "../data/navItemsData";
+export { default as projectData } from "../data/projectData";
+export { default as skillsData } from "../data/skillsData";
+export { default as titleContentData } from "../data/titleContentData";

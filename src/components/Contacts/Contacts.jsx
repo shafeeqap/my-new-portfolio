@@ -1,5 +1,5 @@
 import contactBgImage from "../../assets/bgImages/contactBg.png";
-import { contactsIcons } from "../../data/contactsData";
+import { contactsData } from "../../data";
 import SocialMediaDropdown from "../SocialMediaDropdown/SocialMediaDropdown";
 import ContactForm from "./ContactsForm/ContactsForm";
 import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
@@ -29,7 +29,7 @@ const Contacts = () => {
               </AnimatedWrapper>
 
               <div className="contact-icons-box">
-                {contactsIcons.map((item, index) => (
+                {contactsData.map((item, index) => (
                   <AnimatedWrapper variant={bounceIn} delay={0.2} key={index} className="icon-box">
                     <a
                       href={

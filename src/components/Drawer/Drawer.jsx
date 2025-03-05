@@ -1,7 +1,8 @@
-import "./Drawer.css";
 import PropTypes from "prop-types";
 import NavItems from "../NavItems/NavItems";
-import { nav_items } from "../../data/navItemsData";
+import { navItemsData } from "../../data";
+import "./Drawer.css";
+
 
 const Drawer = ({ isOpen, onClose }) => {
   return (
@@ -15,7 +16,7 @@ const Drawer = ({ isOpen, onClose }) => {
         </div>
 
         <div className="drawer-content">
-          {nav_items.map((item, index) => (
+          {navItemsData.map((item, index) => (
             <div key={index} className="drawer-items" onClick={onClose}>
               <NavItems to={item.path}>{item.display}</NavItems>
             </div>

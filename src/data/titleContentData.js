@@ -1,4 +1,4 @@
-export const titleContentData = (title) => {
+const titleContentData = (title) => {
   const titleId = title.toLowerCase();
 
   switch (titleId) {
@@ -28,3 +28,6 @@ export const titleContentData = (title) => {
       };
   }
 };
+
+
+export default titleContentData

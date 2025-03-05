@@ -19,6 +19,7 @@ const Home = () => {
       <Education />
       <Contacts />
       <div>{<ScrollToTopButton />}</div>
+
     </>
   );
 };

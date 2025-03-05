@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
-import { nav_items } from "../../data/navItemsData";
+import { navItemsData } from "../../data";
 import Drawer from "../Drawer/Drawer";
 import NavItems from "../NavItems/NavItems";
 import Logo from "../../assets/Logo/Logo";
@@ -22,7 +22,7 @@ const Header = () => {
         <div className="nav-container">
           <div className="nav-items">
             <ul>
-              {nav_items.map((item, index) => (
+              {navItemsData.map((item, index) => (
                 <NavItems key={index} to={item.path}>
                   {item.display}
                 </NavItems>

@@ -1,18 +1,20 @@
-import { home_icons } from "../../data/homeIcons";
-import { home_buttonList } from "../../data/homeButtonList";
+import React from "react";
+import { homeIcons, homeButtonList, homeData } from "../../data";
 import Button from "../Button/Button";
 import homePageImage from "../../assets/bgImages/homePageImage.png";
-import { homeData } from "../../data/homeData";
 import TextContent from "./TextContent/TextContent";
-import "./Welcome.css";
 import ToolTipp from "../ToolTipp/ToolTipp";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
 import { bounceIn, scaleFade } from "../../variants";
+import "./Welcome.css";
 
 const Welcome = () => {
   const navigate = useNavigate();
+
+  const handleScroll = () => {
+    document.querySelector("#about-me").scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleClick = (item) => {
     if (item.external) {
@@ -26,7 +28,7 @@ const Welcome = () => {
       <div className="content-wrapper">
         <div style={{ marginBottom: "5px" }}>
           <div style={{ display: "flex", gap: "10px" }}>
-            {home_icons.map((item, index) => (
+            {homeIcons.map((item, index) => (
               <React.Fragment key={index}>
                 <ToolTipp text={item.name}>
                   <a
@@ -60,7 +62,7 @@ const Welcome = () => {
           </AnimatedWrapper>
 
           <div className="button-container">
-            {home_buttonList.map((item) => (
+            {homeButtonList.map((item) => (
               <Button
                 key={item.name}
                 variant={item.variant}
@@ -81,6 +83,7 @@ const Welcome = () => {
           <img src={homePageImage} alt="bg-image" />
         </AnimatedWrapper>
       </div>
+      <div className="scroll-down-btn" onClick={handleScroll}></div>
     </div>
   );
 };

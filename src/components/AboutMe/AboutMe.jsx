@@ -6,7 +6,7 @@ import "./AboutMe.css";
 
 const AboutMe = () => {
   return (
-    <div className="container">
+    <div className="container" id="about-me">
       <AnimatedWrapper variant={scaleFade} delay={0.2}>
         <div className="img-container">
           <img src={aboutMebgImage} alt="bg-image" />
@@ -14,9 +14,9 @@ const AboutMe = () => {
       </AnimatedWrapper>
 
       
-      <div className="about-text-content">
+      <AnimatedWrapper variant={scaleFade} delay={0.2} className="about-text-content">
         <TitleContent title={"howIam"} />
-      </div>
+      </AnimatedWrapper>
     </div>
   );
 };

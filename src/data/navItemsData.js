@@ -1,4 +1,4 @@
-export const nav_items = [
+const navItemsData = [
   {
     path: "/",
     display: "Home",
@@ -24,3 +24,5 @@ export const nav_items = [
     display: "Contacts",
   },
 ];
+
+export default navItemsData;

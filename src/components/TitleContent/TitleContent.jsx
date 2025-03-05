@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
-import { titleContentData } from "../../data/titleContentData";
+import { titleContentData } from "../../data";
 import TitleLabel from "./TitleLabel/TitleLabel";
 import "./TitleContent.css";
-import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
-import { scaleFade } from "../../variants";
+
 
 const TitleContent = ({ title }) => {
   const data = titleContentData(title);
@@ -11,17 +10,13 @@ const TitleContent = ({ title }) => {
   return (
     <div className="title-content">
       <>
-        <AnimatedWrapper variant={scaleFade} delay={0.2}>
+        <div>
           <TitleLabel text={data?.title} />
-        </AnimatedWrapper>
+        </div>
 
-        <AnimatedWrapper
-          variant={scaleFade}
-          delay={0.2}
-          className="title-description"
-        >
+        <div className="title-description">
           <p>{data?.description}</p>
-        </AnimatedWrapper>
+        </div>
       </>
     </div>
   );

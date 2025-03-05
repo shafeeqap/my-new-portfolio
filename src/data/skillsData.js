@@ -1,4 +1,4 @@
-export const skillsData = [
+const skillsData = [
   "HTML",
   "CSS",
   "C",
@@ -36,3 +36,5 @@ export const skillsData = [
 //   "MVCArchitecture",
 //   "DataStructures",
 ];
+
+export default skillsData
