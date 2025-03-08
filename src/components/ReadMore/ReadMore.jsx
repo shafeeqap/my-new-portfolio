@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const ExpandableText = ({ text, limit = 100 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const ReadMore = ({ text, limit = 100 }) => {
+  const [isReadMore , setIsReadMore ] = useState(false);
 
-  const toggleExpand = () => setIsExpanded((prev) => !prev);
+  const toggleExpand = () => setIsReadMore ((prev) => !prev);
 
   if (text.length <= limit) {
     return <p>{text}</p>;
@@ -18,7 +18,7 @@ const ExpandableText = ({ text, limit = 100 }) => {
 
   return (
     <p>
-      {isExpanded ? text : truncatedText}
+      {isReadMore ? text : truncatedText}
       <span
         onClick={toggleExpand}
         style={{
@@ -28,13 +28,13 @@ const ExpandableText = ({ text, limit = 100 }) => {
           fontStyle: "italic",
         }}
       >
-        {isExpanded ? " less" : " more..."}
+        {isReadMore ? " show less" : " ...read more"}
       </span>
     </p>
   );
 };
-ExpandableText.propTypes = {
+ReadMore.propTypes = {
   text: PropTypes.string,
   limit: PropTypes.number,
 };
-export default ExpandableText;
+export default ReadMore;

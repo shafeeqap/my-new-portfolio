@@ -15,11 +15,29 @@ const ScrollToTopButton = () => {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    const start = window.scrollY;
+    const duration = 600; 
+    const startTime = performance.now();
+  
+ 
+    const easeInOutQuad = (t) =>
+      t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  
+    const animateScroll = (currentTime) => {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      const easedProgress = easeInOutQuad(progress);
+  
+      window.scrollTo(0, start * (1 - easedProgress));
+  
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+  
+    requestAnimationFrame(animateScroll);
   };
+  
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);

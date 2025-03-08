@@ -7,16 +7,23 @@ import "./AboutMe.css";
 const AboutMe = () => {
   return (
     <div className="container" id="about-me">
-      <AnimatedWrapper variant={scaleFade} delay={0.2}>
-        <div className="img-container">
+      <div className="aboutMe-content-box">
+        <AnimatedWrapper
+          variant={scaleFade}
+          delay={0.2}
+          className="img-container"
+        >
           <img src={aboutMebgImage} alt="bg-image" />
-        </div>
-      </AnimatedWrapper>
+        </AnimatedWrapper>
 
-      
-      <AnimatedWrapper variant={scaleFade} delay={0.2} className="about-text-content">
-        <TitleContent title={"howIam"} />
-      </AnimatedWrapper>
+        <AnimatedWrapper
+          variant={scaleFade}
+          delay={0.2}
+          className="about-text-content"
+        >
+          <TitleContent title={"howIam"} />
+        </AnimatedWrapper>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { AnimatedWrapper, ExpandableText, ToolTipp } from "../../../components";
+import { AnimatedWrapper, ReadMore, ToolTipp } from "../../../components";
 import { flipCardIcons } from "../../../data";
 import { bounceIn } from "../../../variants";
 import "./SingleProject.css";
@@ -7,17 +7,16 @@ import "./SingleProject.css";
 const SingleProject = ({
   index,
   src,
+  projectImg,
   title,
   description,
   techStack,
-  projectName,
   gitHub,
   externalLink,
   style,
 }) => {
   const customClass = index % 2 === 0 ? "left" : "right";
   const directionClass = index % 2 === 1 ? "reverse" : "";
-  const textAlign = index % 2 === 0 ? "left" : "right";
 
   return (
     <AnimatedWrapper
@@ -32,11 +31,15 @@ const SingleProject = ({
               <div className="image-wrapper">
                 <img src={src} alt="project-image" />
               </div>
+              <div className="responsive-p">
+                <p>{techStack}</p>
+              </div>
             </div>
             <div className="flip-card-back">
               <div className="techstack">
-                <h2>{projectName}</h2>
-                <p className="responsive-p">{techStack}</p>
+                <div className="project-image-box">
+                  <img src={projectImg} alt="project-image" />
+                </div>
               </div>
 
               <div className="flip-card-icons">
@@ -65,16 +68,16 @@ const SingleProject = ({
           </div>
         </div>
 
-        <div className="project-details" style={{ textAlign }}>
-          <div className="description">
+        <div className={`project-details ${directionClass}`}>
+          <div className="description" style={style}>
             <h3>{title}</h3>
             <div>
-              <ExpandableText text={description} limit={300} />
+              <ReadMore text={description} limit={300} />
             </div>
           </div>
         </div>
       </div>
-      <div className="separator" style={{ top: style }}></div>
+      <div className="separator" style={style}></div>
     </AnimatedWrapper>
   );
 };
@@ -82,6 +85,7 @@ const SingleProject = ({
 SingleProject.propTypes = {
   index: PropTypes.number,
   src: PropTypes.string,
+  projectImg: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   techStack: PropTypes.string,

@@ -2,16 +2,26 @@
     min-width: 330px;
 }
 
-.title-description{
+.title-description {
     max-width: 100%;
+    width: 250px;
 }
 
 /* Tablet (portrait and landscape) */
-@media (min-width: 577px) and (max-width: 1024px) {}
+@media (min-width: 577px) and (max-width: 1024px) {
+    .title-description {
+        width: 550px;
+    }
+}
 
 /* Desktop (smaller screens and up) */
 @media (min-width: 1025px) {
     .title-content {
         width: 100%;
+    }
+
+    .title-description {
+        max-width: 100%;
+        width: 550px;
     }
 }

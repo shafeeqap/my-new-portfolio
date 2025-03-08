@@ -1,9 +1,16 @@
+.aboutMe-content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    padding: 10px;
+}
+
 .img-container {
-    position: relative;
-    top: 250px;
-    left: 0;
-    width: 100%;
-    /* background-color: red; */
+    text-align: center;
+    position: absolute;
+    top: 100;
+    left: 80px;
 }
 
 .img-container img {
@@ -12,28 +19,43 @@
 }
 
 .about-text-content {
-    position: relative;
     max-width: 500px;
     width: 300px;
-
+    padding: 10px;
+    position: relative;
 }
 
 
 /* Tablet (portrait and landscape) */
 @media (min-width: 577px) and (max-width: 1024px) {
+    .about-text-content {
+        width: 100%;
+    }
+
+    .img-container {
+        top: 100;
+        left: 40%;
+    }
 
 }
 
 /* Desktop (smaller screens and up) */
 @media (min-width: 1025px) {
+    .aboutMe-content-box {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     .img-container {
         position: relative;
-        top: 0;
+        top: 100;
         left: 80px;
     }
 
     .img-container img {
-        width: 250px;
+        width: 300px;
     }
 
     .about-text-content {

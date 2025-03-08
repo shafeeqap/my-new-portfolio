@@ -5,6 +5,7 @@ import SingleProject from "./SingleProject/SingleProject";
 import { IoEyeOutline } from "react-icons/io5";
 import "./Projects.css";
 
+
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,8 +25,8 @@ const Projects = () => {
               key={index}
               index={index}
               src={item.src}
+              projectImg={item.projectImg}
               title={item.title}
-              projectName={item.projectName}
               gitHub={item.gitHub}
               externalLink={item.externalLink}
               techStack={item.techStack}
@@ -48,6 +49,7 @@ const Projects = () => {
           isOpen={isModalOpen}
           onClose={handleModalClose}
           title={"Project Details"}
+          style={{color:"white"}}
         >
           {projectData.map((item, index) => (
             <div key={index} style={{ padding: "25px" }}>
@@ -55,13 +57,13 @@ const Projects = () => {
                 key={index}
                 index={index}
                 src={item.src}
+                projectImg={item.projectImg}
                 title={item.title}
-                projectName={item.projectName}
                 gitHub={item.gitHub}
                 externalLink={item.externalLink}
                 techStack={item.techStack}
                 description={item.description}
-                style={"110%"}
+                style={{top:"110%", color:"black"}}
               />
             </div>
           ))}

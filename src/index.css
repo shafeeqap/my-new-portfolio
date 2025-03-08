@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html {
@@ -38,7 +39,6 @@ html {
 
 .image-container {
   margin: 0;
-  animation: slideInRight 1s ease-out;
 }
 
 .image-container img {
@@ -77,60 +77,10 @@ html {
 }
 
 
-
-/* Keyframes for fading in */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* Keyframes for sliding in from the left */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Keyframes for sliding in from the right */
-@keyframes slideInRight {
-  from {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Keyframes for fading in and moving upward */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
 /* Tablet (portrait and landscape) */
 @media (min-width: 577px) and (max-width: 1024px) {
+  .container {}
+
   .image-container img {
     width: 350px;
     display: flex;

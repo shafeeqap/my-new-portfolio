@@ -13,5 +13,5 @@ export { default as Contacts } from "./Contacts/Contacts";
 export { default as Education } from "./Education/Education";
 export { default as Skills } from "./Skills/Skills";
 export { default as ScrollToTopButton } from "./ScrollToTopButton/ScrollToTopButton";
-export { default as ExpandableText } from "./ExpandableText/ExpandableText";
+export { default as ReadMore } from "./ReadMore/ReadMore";
 export {default as AnimatedWrapper} from "./AnimatedWrapper/AnimatedWrapper"

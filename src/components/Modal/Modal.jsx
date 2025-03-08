@@ -3,7 +3,7 @@ import { IoMdClose } from "react-icons/io";
 import PropTypes from "prop-types";
 import "./Modal.css";
 
-const Modal = ({ isOpen, onClose, title, children }) => {
+const Modal = ({ isOpen, onClose, title, children , style}) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
@@ -15,7 +15,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
 
         <div className="modal-scroll-content">
           {title && <h2 className="modal-title">{title}</h2>}
-          <div className="modal-actions">{children}</div>
+          <div className="modal-actions" style={style}>{children}</div>
         </div>
       </div>
     </div>,

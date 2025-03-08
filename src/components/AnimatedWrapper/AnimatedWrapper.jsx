@@ -12,7 +12,7 @@ const AnimatedWrapper = ({
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    triggerOnce: false,
+    triggerOnce: true,
     margin: "-20% 0px",
     amount: 0.25,
   });

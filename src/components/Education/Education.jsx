@@ -77,6 +77,7 @@ const Education = () => {
               course={edu.course}
               startYear={edu.startYear}
               endYear={edu.endYear}
+              style={'white'}
             />
           </div>
         ))}

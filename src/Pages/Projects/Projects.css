@@ -20,7 +20,6 @@
 
 /* Tablet (portrait and landscape) */
 @media (min-width: 577px) and (max-width: 1024px) {
-
     .project-content-wrapper {
         padding: 25%;
     }
@@ -28,11 +27,9 @@
 
 /* Desktop (smaller screens and up) */
 @media (min-width: 1025px) {
-
     .project-content-wrapper {
         padding: 10%;
         overflow: auto;
-
     }
 
 }

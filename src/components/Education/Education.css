@@ -38,11 +38,9 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -8px;
-    /* adjust the distance below the main box */
+    bottom: -8px; /* adjust the distance below the main box */
     width: 99.9%;
-    height: 10px;
-    /* the “box” height */
+    height: 10px; /* the “box” height */
     background-color: #401ff7;
     border-radius: 0 0 20px 20px;
     opacity: 0;

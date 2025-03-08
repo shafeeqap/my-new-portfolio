@@ -8,13 +8,10 @@ import { useNavigate } from "react-router-dom";
 import AnimatedWrapper from "../AnimatedWrapper/AnimatedWrapper";
 import { bounceIn, scaleFade } from "../../variants";
 import "./Welcome.css";
+import ScrollDownButton from "../ScrollDownButton/ScrollDownButton";
 
 const Welcome = () => {
   const navigate = useNavigate();
-
-  const handleScroll = () => {
-    document.querySelector("#about-me").scrollIntoView({ behavior: "smooth" });
-  };
 
   const handleClick = (item) => {
     if (item.external) {
@@ -26,64 +23,69 @@ const Welcome = () => {
   return (
     <div className="container">
       <div className="content-wrapper">
-        <div style={{ marginBottom: "5px" }}>
-          <div style={{ display: "flex", gap: "10px" }}>
-            {homeIcons.map((item, index) => (
-              <React.Fragment key={index}>
-                <ToolTipp text={item.name}>
-                  <a
-                    href={item.href ? item.href : item.mailto}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <AnimatedWrapper
-                      variant={bounceIn}
-                      delay={0.2}
-                      className="icon-circle"
+        <div className="content-box">
+          <div className="text-icon-box">
+            <div className="conection-icon-box">
+              {homeIcons.map((item, index) => (
+                <React.Fragment key={index}>
+                  <ToolTipp text={item.name}>
+                    <a
+                      href={item.href ? item.href : item.mailto}
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                      <img
-                        src={item.src}
-                        alt={item.alt}
-                        style={{ cursor: "pointer" }}
-                      />
-                    </AnimatedWrapper>
-                  </a>
-                </ToolTipp>
-              </React.Fragment>
-            ))}
+                      <AnimatedWrapper
+                        variant={bounceIn}
+                        delay={0.2}
+                        className="icon-circle"
+                      >
+                        <img
+                          src={item.src}
+                          alt={item.alt}
+                          style={{ cursor: "pointer" }}
+                        />
+                      </AnimatedWrapper>
+                    </a>
+                  </ToolTipp>
+                </React.Fragment>
+              ))}
+            </div>
+
+            <AnimatedWrapper
+              variant={scaleFade}
+              delay={0.2}
+              className="text-content"
+            >
+              <TextContent {...homeData} />
+            </AnimatedWrapper>
+
+            <div className="button-container">
+              {homeButtonList.map((item) => (
+                <Button
+                  key={item.name}
+                  variant={item.variant}
+                  size={item.size}
+                  onClick={() => handleClick(item)}
+                >
+                  {item.name}
+                </Button>
+              ))}
+            </div>
           </div>
 
           <AnimatedWrapper
             variant={scaleFade}
             delay={0.2}
-            className="text-content"
+            className="image-container"
           >
-            <TextContent {...homeData} />
+            <img src={homePageImage} alt="bg-image" />
           </AnimatedWrapper>
-
-          <div className="button-container">
-            {homeButtonList.map((item) => (
-              <Button
-                key={item.name}
-                variant={item.variant}
-                size={item.size}
-                onClick={() => handleClick(item)}
-              >
-                {item.name}
-              </Button>
-            ))}
-          </div>
         </div>
 
-        <AnimatedWrapper
-          variant={scaleFade}
-          delay={0.2}
-          className="image-container"
-        >
-          <img src={homePageImage} alt="bg-image" />
-        </AnimatedWrapper>
+        <div>
+          <ScrollDownButton />
+        </div>
       </div>
-      <div className="scroll-down-btn" onClick={handleScroll}></div>
     </div>
   );
 };

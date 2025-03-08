@@ -19,13 +19,12 @@
 .social-media-icons-vertical {
     padding-left: 8px;
     width: 30px;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     position: relative;
-/* background-color: red; */
 }
 
 .contact-inform {

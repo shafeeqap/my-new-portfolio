@@ -1,13 +1,19 @@
 import ecart from "../assets/bgImages/Ecart.png";
+import ECart from '../assets/bgImages/ECart-02.png'
 import quizio from "../assets/bgImages/Quizio.png";
+import Quizio from '../assets/bgImages/quizio-02.png'
 import pulseTalk from "../assets/bgImages/PulseTalk.png";
-import blueHarvest from "../assets/bgImages/BlueHarvest.png";
+import PulseTalk from "../assets/bgImages/PulseTalk-02.png"
 import weatherWhiz from "../assets/bgImages/WeatherWhiz.png";
+import WeatherWhiz from "../assets/bgImages/WeatherWhiz-02.png"
+import blueHarvest from "../assets/bgImages/BlueHarvest.png";
+import BlueHarvest from "../assets/bgImages/blueHarvest-02.png"
 
 const projectData = [
   {
     id: 1,
     src: ecart,
+    projectImg: ECart,
     title: "E-commerce platform",
     projectName: "Ecart",
     techStack:
@@ -21,6 +27,7 @@ const projectData = [
   {
     id: 2,
     src: quizio,
+    projectImg: Quizio,
     title: "Quiz Application",
     projectName: "Quizio",
     techStack: "JavaScript, React, HTML/CSS, Firebase, jsPDF, React Share",
@@ -32,6 +39,7 @@ const projectData = [
   {
     id: 3,
     src: pulseTalk,
+    projectImg: PulseTalk,
     title: "Chat App",
     projectName: "PulseTalk",
     techStack: "JavaScript, React, Chakra UI, Node.js, Socket IO",
@@ -43,6 +51,7 @@ const projectData = [
   {
     id: 4,
     src: weatherWhiz,
+    projectImg: WeatherWhiz,
     title: "Weather App",
     projectName: "WeatherWhiz",
     techStack: "JavaScript, React, APIs",
@@ -54,11 +63,12 @@ const projectData = [
   {
     id: 5,
     src: blueHarvest,
+    projectImg: BlueHarvest,
     title: "Seafood Restaurant",
     projectName: "BlueHarvest",
     techStack: "JavaScript, React, MUI",
     description:
-      "This weather application is a modern, responsive tool built with React.js that delivers real-time weather information tailored to the user's location. By integrating data from reliable third-party APIs, the app provides accurate, up-to-date weather updates and forecasts. Its dynamic and user-friendly interface offers intuitive navigation and clear visualizations, making it easy for users to access current conditions and future predictions. The implementation leverages location-based services to automatically display relevant weather details, ensuring a personalized and engaging user experience.",
+      "This seafood restaurant landing page is a sleek, modern design built with React.js and inspired by Material UI. It highlights mouth-watering seafood dishes and elegant visuals, providing an enticing preview of a fully functional website soon to be updated with interactive features.",
     gitHub: "https://github.com/shafeeqap/React/tree/main/Restaurant_app_MUI",
     externalLink: "#",
   },

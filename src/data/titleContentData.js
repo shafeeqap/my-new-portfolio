@@ -6,28 +6,27 @@ const titleContentData = (title) => {
       return {
         title: "How I am",
         description:
-          "Greetings, and welcome to my portfolio! I'm Aboobacker Shafeeq.AP, a passionate and innovative developer with a keen eye for creating immersive digital experiences.With a blend of technical prowess and creative vision, bring life to the virtual world through my coding skills and design sensibilities.",
+          "Hello and welcome to my portfolio! I'm Aboobacker Shafeeq.AP, a dedicated MERN stack developer who turns innovative ideas into engaging digital experiences. I blend technical expertise with a creative vision to build responsive, intuitive web applications that truly resonate with users. My journey is driven by continuous learning and a passion for crafting solutions that are as functional as they are visually compelling. Explore my work and see how I bring the virtual world to life through thoughtful code and design.",
       };
     case "skills":
       return {
         title: "Skills",
         description:
-          "Experienced and versatile professional with a strong foundation in both digital designing and computer coding. Proficient in utilizing industry-standard design tools to create visually captivating graphics, user interfaces, and digital content.",
+          "I'm a skilled MERN stack developer passionate about creating end-to-end web solutions. I build scalable and responsive applications by leveraging MongoDB, Express, React, and Node.js, ensuring robust backends and intuitive frontends that deliver exceptional user experiences.",
       };
     case "education":
       return {
         title: "Education",
         description:
-          "Experienced and versatile professional with a strong foundation in both digital designing and computer coding. Proficient in utilizing industry-standard design tools to create visually captivating graphics, user interfaces, and digital content.",
+          "My education has been a cornerstone of my personal and professional growth. It has provided me with a strong foundation in critical thinking and problem solving, while my self-driven learning and hands-on experiences have enriched my practical skills.",
       };
     case "projects":
       return {
         title: "Projects",
         description:
-          "Experienced and versatile professional with a strong foundation in both digital designing and computer coding. Proficient in utilizing industry-standard design tools to create visually captivating graphics, user interfaces, and digital content.",
+          "Explore my portfolio to see a curated collection of projects where creativity meets technical precision. Each project reflects my passion for solving challenges with innovative design and a user-centered approach.",
       };
   }
 };
 
-
-export default titleContentData
+export default titleContentData;
