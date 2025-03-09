@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Tooltipp.css";
+import "./ToolTipp.css";
 import PropTypes from "prop-types";
 
 const ToolTipp = ({ children, text }) => {
