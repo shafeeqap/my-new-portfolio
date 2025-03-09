@@ -1,6 +1,6 @@
 import email from "../assets/images/email_icon.png";
 import gitHub from "../assets/images/GitHubIcon.png";
-import linkedIn from "../assets/images/linkedin.png";
+import linkedIn from "../assets/images/linkedIn.png";
 
 const homeIcons = [
   {
