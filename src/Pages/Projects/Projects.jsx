@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Button, Modal, TitleContent } from "../../components";
+import { AnimatedWrapper, Button, Modal, TitleContent } from "../../components";
 import { projectData } from "../../data";
 import SingleProject from "./SingleProject/SingleProject";
 import { IoEyeOutline } from "react-icons/io5";
+import { slideIn } from "../../variants";
 import "./Projects.css";
-
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,9 +16,9 @@ const Projects = () => {
     <>
       <div className="project-container">
         <div className="project-content-wrapper">
-          <div>
+          <AnimatedWrapper variant={slideIn} direction="left" delay={0.2}>
             <TitleContent title={"projects"} />
-          </div>
+          </AnimatedWrapper>
 
           {projectData.slice(0, 2).map((item, index) => (
             <SingleProject
@@ -49,7 +49,7 @@ const Projects = () => {
           isOpen={isModalOpen}
           onClose={handleModalClose}
           title={"Project Details"}
-          style={{color:"white"}}
+          style={{ color: "white" }}
         >
           {projectData.map((item, index) => (
             <div key={index} style={{ padding: "25px" }}>
@@ -63,7 +63,7 @@ const Projects = () => {
                 externalLink={item.externalLink}
                 techStack={item.techStack}
                 description={item.description}
-                style={{top:"110%", color:"black"}}
+                style={{ top: "110%", color: "black" }}
               />
             </div>
           ))}

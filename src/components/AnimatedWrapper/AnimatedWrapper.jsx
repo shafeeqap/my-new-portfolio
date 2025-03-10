@@ -17,16 +17,9 @@ const AnimatedWrapper = ({
     amount: 0.25,
   });
 
-  const getVariants = () => {
-    try {
-      return variant(
-        variant.length === 1 ? { delay } : { direction, delay }
-      );
-    } catch {
-      return variant({ delay });
-    }
-  };
+  const getVariants = () => variant({ direction, delay });
 
+  
   return (
     <motion.div
       ref={ref}
