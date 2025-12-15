@@ -4,12 +4,15 @@ import { useState } from "react";
 const ReadMore = ({ text, limit = 100 }) => {
   const [isReadMore , setIsReadMore ] = useState(false);
 
+  // Toggle Function
   const toggleExpand = () => setIsReadMore ((prev) => !prev);
 
+  // Check if Truncation is Needed
   if (text.length <= limit) {
     return <p>{text}</p>;
   }
 
+  // Create Truncated Text part to avoid cutting words in the middle 
   let truncatedText = text.substring(0, limit);
   const lastSpaceIndex = truncatedText.lastIndexOf(" ");
   if (lastSpaceIndex > 0) {
