@@ -8,6 +8,8 @@ import weatherWhiz from "../assets/bgImages/WeatherWhiz.png";
 import WeatherWhiz from "../assets/bgImages/WeatherWhiz-02.png"
 import blueHarvest from "../assets/bgImages/BlueHarvest.png";
 import BlueHarvest from "../assets/bgImages/blueHarvest-02.png"
+import letsgo from "../assets/bgImages/letsgo.png";
+import Letsgo from "../assets/bgImages/LetsGo1.png";
 
 const projectData = [
   {
@@ -71,6 +73,18 @@ const projectData = [
       "This seafood restaurant landing page is a sleek, modern design built with React.js and inspired by Material UI. It highlights mouth-watering seafood dishes and elegant visuals, providing an enticing preview of a fully functional website soon to be updated with interactive features.",
     gitHub: "https://github.com/shafeeqap/React/tree/main/Restaurant_app_MUI",
     externalLink: "#",
+  },
+  {
+    id: 6,
+    src: letsgo,
+    projectImg: Letsgo,
+    title: "Travel App",
+    projectName: "Let'sGo",
+    techStack: "JavaScript, Next.js, Tailwind CSS, APIs",
+    description:
+      "This travel application is a visually stunning and user-friendly platform built with Next.js and styled with Tailwind CSS. It offers users an immersive experience to explore travel destinations, access real-time information, and plan their trips effectively. By integrating various APIs, the app provides comprehensive details about locations, including weather updates, local attractions, and travel tips. The intuitive design ensures seamless navigation, making it easy for users to discover new places and create personalized travel itineraries.",
+    gitHub: "https://github.com/shafeeqap/Next.js/tree/main/travel-app",
+    externalLink: "https://travel-app-blush-zeta.vercel.app/",
   },
 ];
 
