@@ -72,7 +72,7 @@ const projectData = [
     description:
       "This seafood restaurant landing page is a sleek, modern design built with React.js and inspired by Material UI. It highlights mouth-watering seafood dishes and elegant visuals, providing an enticing preview of a fully functional website soon to be updated with interactive features.",
     gitHub: "https://github.com/shafeeqap/React/tree/main/Restaurant_app_MUI",
-    externalLink: "#",
+    externalLink: "https://react-88oa.vercel.app/",
   },
   {
     id: 6,
